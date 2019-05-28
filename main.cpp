@@ -14,6 +14,7 @@ using namespace std;
 
 int main()
 {
+	system ("color 0a");
 	C_login objeto1;
 	objeto1.bienvenida();
 	objeto1.login();
