@@ -14,6 +14,7 @@ using namespace std;
 
 int main()
 {
+	cout<<"hola"<<endl;
 	C_login objeto1;
 	objeto1.bienvenida();
 	objeto1.login();
