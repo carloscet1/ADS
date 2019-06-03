@@ -144,7 +144,7 @@ do
 			{
 	            if(dato2[i].ID_almacenista==verificar)
 	           	{
-	            	dato2[i].mostrar();//DEPLIEGA EL MÉTODO MOSTRAR DE ALMACENISTA
+	            	dato2[i].mostrar();//DESPLIEGA EL MÉTODO MOSTRAR DE ALMACENISTA
 	            	flag2=1;//NOS DICE SI FUE ENCONTRADO EL REGISTRO
 	            	break;
 				}
@@ -196,7 +196,7 @@ do
         	flag2=0;
 			for(int i=0; i<dato2.size();i++)
 			 {
-			  dato2[i].mostrar();//MUESTRO TODOS LOS REGISTROS DE ALMACENISTA
+			  dato2[i].mostrar();//MUESTRA TODOS LOS REGISTROS DE ALMACENISTA
 			  flag2=1;//NOS DICE SI NO SE ENCONTRARON REGISTROS
 			 }
              //LE ENVIA UN AVISO AL USUARIO SI NO HAY REGISTROS
@@ -210,7 +210,7 @@ do
             break;
             
 		case '6':
-			//LIMPIA LA PANTALLA Y DEPLIEGA EL EL MÉTODO IMPRIME REPORTE
+			//LIMPIA LA PANTALLA Y DESPLIEGA EL EL MÉTODO IMPRIME REPORTE
 			system("cls");
 			cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
@@ -264,11 +264,11 @@ do
       switch(opcion)
       {
        	case '1':
-       		//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO AGREGAR DE LA CALSE MATERIA PRIMA
+       		//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO AGREGAR DE LA CLASE MATERIA PRIMA
        		system("cls");
 			objeto3.agregar();
 		  	dato3.push_back(objeto3);//GUARDA EL NOMBRE DE LA MATERIA PRIMA Y EL ID
-		  	objeto3.ID_materia_prima++;//INCREMENTA EL ID DE LA MATERIA PRIMA PARA EL SIGUIENTE REGISRO
+		  	objeto3.ID_materia_prima++;//INCREMENTA EL ID DE LA MATERIA PRIMA PARA EL SIGUIENTE REGISTRO
 		  	cout<<"-------------------------------"<<endl;
 			cout<<"REGISTRO AGREGADO EXITOSAMENTE"<<endl;
     		cout<<"-------------------------------"<<endl;
@@ -400,11 +400,11 @@ do
 	           	{	//CALCULA EL COSTO DE LA MATERIA PRIMA
 	            	objeto3.costo_total = dato3[i].total_comprado*dato3[i].p_unitario;
 	            	cout<<"El costo calculado es: "<<objeto3.costo_total<<endl;
-	            	flag3=1;//NOS DICE SI SI FUE CALCULADO EL COSTO O SI EXISTE
+	            	flag3=1;//NOS DICE SI SÍ FUE CALCULADO EL COSTO O SI EXISTE
 	            	break;
 				}
 	        }
-	        //LE AVISA AL USARIO QUE NO FUE ENCONTRADO EL ID INGRESADO
+	        //LE AVISA AL USUARIO QUE NO FUE ENCONTRADO EL ID INGRESADO
 	        if(flag3==0)
 	        { 
 	            cout<<"-------------------------------"<<endl;
