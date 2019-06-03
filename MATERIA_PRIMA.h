@@ -33,7 +33,7 @@ class C_materia_prima : public C_sistema//C_MATERIA PRIMA HEREDA ATRIBUTOS Y MËT
 //CONSTRUCTOR
 C_materia_prima::C_materia_prima()
 {
-	SE RESERVA ESPACIO EN MEMORIA DE ID_MATERIA_PRIMA Y DEL COSTO
+	//SE RESERVA ESPACIO EN MEMORIA DE ID_MATERIA_PRIMA Y DEL COSTO
 	ID_materia_prima=1;
 	costo_total=0;
 };
