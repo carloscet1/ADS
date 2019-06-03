@@ -30,11 +30,13 @@ class C_almacenista : public C_sistema
 
 C_almacenista::C_almacenista()
 {
-	ID_almacenista=0;
+	ID_almacenista=1;
 };
 
 void C_almacenista::agregar()
 {
+	ID_almacenista;
+	
     cout<<"Ingresa el nombre del almacenista"<<endl;
    	getline(cin, nombre_almacenista);
 }
