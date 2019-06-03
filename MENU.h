@@ -3,7 +3,6 @@
 
 Álvarez Santiago Daniela
 Rojas Solís Juan Carlos
-Sanchez Lemus Ulises Mariano
 Servin Zamora Alejandro
 
 PROYECTO
@@ -12,7 +11,7 @@ PROYECTO
 #ifndef _MENU_H
 #define _MENU_H
 #include "ALMACENISTA.h"
-#include "ALMACEN.h"
+#include "MATERIA_PRIMA.h"
 #include<vector>
 
 using namespace std;
@@ -23,15 +22,15 @@ class C_menu
 	    char opcion;
 	    vector<C_almacenista> dato2;
  		C_almacenista objeto2;
-	    vector<C_almacen> dato3;
- 		C_almacen objeto3;
+	    vector<C_materia_prima> dato3;
+ 		C_materia_prima objeto3;
 		int verificar,pos,flag2,flag3;
 
 	public:
 	    C_menu();
 	    void menu_general();
 	    void menu_almacenista();
-	    void menu_almacen();
+	    void menu_materia_prima();
 };
 
 C_menu::C_menu()
@@ -47,7 +46,7 @@ do
     {
       cout<<"Selecciona una opcion"<<endl;
       cout<<"1.- Menu de almacenista"<<endl;
-      cout<<"2.- Menu de almacen"<<endl;
+      cout<<"2.- Menu de materia prima"<<endl;
       cout<<"3.- Salir"<<endl;
       cin>>opcion;
       cin.ignore();
@@ -58,7 +57,7 @@ do
             break;
        
        	case '2':
-            menu_almacen();
+            menu_materia_prima();
             break;
        
        	case '3':
@@ -182,16 +181,16 @@ do
     }while(opcion!='7');
 }
 
-void C_menu::menu_almacen()
+void C_menu::menu_materia_prima()
 {
 do
     {
       cout<<"Selecciona una opcion"<<endl;
-      cout<<"1.- Agregar registro almacen"<<endl;
-      cout<<"2.- Eliminar registro almacen"<<endl;
-      cout<<"3.- Buscar registro almacen"<<endl;
-      cout<<"4.- Editar registro almacen"<<endl;
-      cout<<"5.- Mostrar registros almacen"<<endl;
+      cout<<"1.- Agregar registro materia prima"<<endl;
+      cout<<"2.- Eliminar registro materia prima"<<endl;
+      cout<<"3.- Buscar registro materia prima"<<endl;
+      cout<<"4.- Editar registro materia prima"<<endl;
+      cout<<"5.- Mostrar registros materia prima"<<endl;
       cout<<"6.- Costo total por producto"<<endl;
       cout<<"7.- Salir"<<endl;
       cin>>opcion;
@@ -203,7 +202,7 @@ do
 			{
 				if(flag3==0)
 				{
-					objeto3.ID_almacen = i+1;
+					objeto3.ID_materia_prima = i+1;
 		  			objeto3.agregar();
 		  			dato3.push_back(objeto3);
 		  		}
@@ -211,12 +210,12 @@ do
 		  		else
 				{
 					flag3++;
-					objeto3.ID_almacen = flag3;
+					objeto3.ID_materia_prima = flag3;
 		  			objeto3.agregar();
 		  			dato3.push_back(objeto3);
 		  		}
 			}
-			flag3=objeto3.ID_almacen;
+			flag3=objeto3.ID_materia_prima;
             break;
        
        	case '2':
@@ -225,7 +224,7 @@ do
 	    	cin.ignore();
 	        for(int i=0; i<dato3.size();i++)
 			{
-	            if(dato3[i].ID_almacen==verificar)
+	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	pos=i;
 	            	dato3.erase(dato3.begin()+pos);
@@ -240,7 +239,7 @@ do
 	    	cin.ignore();
 	        for(int i=0; i<dato3.size();i++)
 			{
-	            if(dato3[i].ID_almacen==verificar)
+	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	dato3[i].mostrar();
 	            	break;
@@ -254,7 +253,7 @@ do
 	    	cin.ignore();
 	        for(int i=0; i<dato3.size();i++)
 			{
-	            if(dato3[i].ID_almacen==verificar)
+	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	dato3[i].editar();
 	            	break;
@@ -275,7 +274,7 @@ do
 	    	cin.ignore();
 	        for(int i=0; i<dato3.size();i++)
 			{
-	            if(dato3[i].ID_almacen==verificar)
+	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	objeto3.costo_total = dato3[i].total_comprado*dato3[i].p_unitario;
 	            	cout<<"El costo calculado es: "<<objeto3.costo_total<<endl;
