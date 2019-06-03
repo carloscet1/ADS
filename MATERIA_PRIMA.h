@@ -33,12 +33,14 @@ class C_materia_prima : public C_sistema
 
 C_materia_prima::C_materia_prima()
 {
-	ID_materia_prima=0;
+	ID_materia_prima=1;
 	costo_total=0;
 };
 
 void C_materia_prima::agregar()
 {
+	ID_materia_prima;
+	
     cout<<"Ingresa el nombre de la materia prima"<<endl;
    	getline(cin, materia_prima);
     

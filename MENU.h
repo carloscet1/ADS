@@ -36,8 +36,6 @@ class C_menu
 C_menu::C_menu()
 {
 	pos=-1;
-	flag2=0;
-	flag3=0;
 };
 
 void C_menu::menu_general()
@@ -87,88 +85,136 @@ do
       switch(opcion)
       {
        	case '1':
-       		for(int i=0;i<4;i++)
-			{
-				if(flag2==0)
-				{
-					objeto2.ID_almacenista = i+1;
-		  			objeto2.agregar();
-		  			dato2.push_back(objeto2);
-		  		}
-		  		
-		  		else
-				{
-					flag2++;
-					objeto2.ID_almacenista = flag2;
-		  			objeto2.agregar();
-		  			dato2.push_back(objeto2);
-		  		}
-			}
-			flag2=objeto2.ID_almacenista;
+		  	objeto2.agregar();
+		  	dato2.push_back(objeto2);
+		  	objeto2.ID_almacenista++;
+		  	cout<<"-------------------------------"<<endl;
+			cout<<"REGISTRO AGREGADO EXITOSAMENTE"<<endl;
+    		cout<<"-------------------------------"<<endl;
             break;
        
        	case '2':
        		cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag2=0;
 	        for(int i=0; i<dato2.size();i++)
 			{
 	            if(dato2[i].ID_almacenista==verificar)
 	           	{
 	            	pos=i;
 	            	dato2.erase(dato2.begin()+pos);
-	            	break;
+    				flag2=1;
 				}
 	        }
+	    
+	        if(flag2==1)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO ELIMINADO EXITOSAMENTE"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
+			
+			else
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
             break;
        
        	case '3':
        		cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag2=0;
 	        for(int i=0; i<dato2.size();i++)
 			{
 	            if(dato2[i].ID_almacenista==verificar)
 	           	{
 	            	dato2[i].mostrar();
+	            	flag2=1;
 	            	break;
 				}
 	        }
+	        
+	        if(flag2==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;
 		
 		case '4':
 			cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag2=0;
 	        for(int i=0; i<dato2.size();i++)
 			{
 	            if(dato2[i].ID_almacenista==verificar)
 	           	{
 	            	dato2[i].editar();
-	            	break;
+	            	flag2=1;
 				}
 	        }
+	        
+		 	 if(flag2==1)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO EDITADO EXITOSAMENTE"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
+			
+			else
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
             break;
         
         case '5':
+        	flag2=0;
 			for(int i=0; i<dato2.size();i++)
 			 {
 			  dato2[i].mostrar();
+			  flag2=1;
 			 }
+			
+			if(flag2==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"NO SE ENCONTRARON REGISTROS"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;
             
 		case '6':
 			cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag2=0;
 	        for(int i=0; i<dato2.size();i++)
 			{
 	            if(dato2[i].ID_almacenista==verificar)
 	           	{
 	            	dato2[i].imprimir_reporte();
+	            	flag2=1;
 	            	break;
 				}
 	        }
+	        
+	        if(flag2==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;
 							
 		case '7':
@@ -198,89 +244,137 @@ do
       switch(opcion)
       {
        	case '1':
-      		for(int i=0;i<4;i++)
-			{
-				if(flag3==0)
-				{
-					objeto3.ID_materia_prima = i+1;
-		  			objeto3.agregar();
-		  			dato3.push_back(objeto3);
-		  		}
-		  		
-		  		else
-				{
-					flag3++;
-					objeto3.ID_materia_prima = flag3;
-		  			objeto3.agregar();
-		  			dato3.push_back(objeto3);
-		  		}
-			}
-			flag3=objeto3.ID_materia_prima;
+			objeto3.agregar();
+		  	dato3.push_back(objeto3);
+		  	objeto3.ID_materia_prima++;
+		  	cout<<"-------------------------------"<<endl;
+			cout<<"REGISTRO AGREGADO EXITOSAMENTE"<<endl;
+    		cout<<"-------------------------------"<<endl;
             break;
        
        	case '2':
-       		cout<<"Ingrese el ID"<<endl;
+			cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag3=0;
 	        for(int i=0; i<dato3.size();i++)
 			{
 	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	pos=i;
 	            	dato3.erase(dato3.begin()+pos);
-	            	break;
+    				flag3=1;
 				}
 	        }
+	    
+	        if(flag3==1)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO ELIMINADO EXITOSAMENTE"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
+			
+			else
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
             break;
        
        	case '3':
-       		cout<<"Ingrese el ID"<<endl;
+	        cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag3=0;
 	        for(int i=0; i<dato3.size();i++)
 			{
 	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	dato3[i].mostrar();
+	            	flag3=1;
 	            	break;
 				}
 	        }
+	        
+	        if(flag3==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;
 		
 		case '4':
-			cout<<"Ingrese el ID"<<endl;
+	        cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag3=0;
 	        for(int i=0; i<dato3.size();i++)
 			{
 	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	dato3[i].editar();
-	            	break;
+	            	flag3=1;
 				}
 	        }
+	        
+		 	if(flag3==1)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO EDITADO EXITOSAMENTE"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
+			
+			else
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+			}
             break;
             
 		case '5':
+			flag3=0;
 			for(int i=0; i<dato3.size();i++)
 			 {
 			  dato3[i].mostrar();
+			  flag3=1;
 			 }
+			
+			if(flag3==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"NO SE ENCONTRARON REGISTROS"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;
 					
 		case '6':
-			cout<<"Ingrese el ID"<<endl;
+	        cout<<"Ingrese el ID"<<endl;
 	    	cin>>verificar;
 	    	cin.ignore();
+	    	flag3=0;
 	        for(int i=0; i<dato3.size();i++)
 			{
 	            if(dato3[i].ID_materia_prima==verificar)
 	           	{
 	            	objeto3.costo_total = dato3[i].total_comprado*dato3[i].p_unitario;
 	            	cout<<"El costo calculado es: "<<objeto3.costo_total<<endl;
+	            	flag3=1;
 	            	break;
 				}
 	        }
+	        
+	        if(flag3==0)
+	        { 
+	            cout<<"-------------------------------"<<endl;
+				cout<<"REGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"-------------------------------"<<endl;
+    			break;
+			}
             break;			
 		
 		case '7':
