@@ -3,7 +3,6 @@
 
 Álvarez Santiago Daniela
 Rojas Solís Juan Carlos
-Sanchez Lemus Ulises Mariano
 Servin Zamora Alejandro
 
 PROYECTO
