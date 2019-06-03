@@ -13,10 +13,11 @@ using namespace std;
 
 int main()
 {
-	system ("color 0a");
-	C_login objeto1;
-	objeto1.bienvenida();
-	objeto1.login();
+	
+	system ("color 0a")//CAMBIA DE COLOR EL FONDO A NEGRO Y LAS LETRAS A VERDE;
+	C_login objeto1;//SE DECLARA UN OBJETO DE LA CLASE LOGIN
+	objeto1.bienvenida();SE MUESTRA LA BIENVENIDA
+	objeto1.login();//SE MUESTRA EL LOGIN Y VALIDA EL ACCESO AL PROGRAMA
 	system("PAUSE");
     return 0;
 }

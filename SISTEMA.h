@@ -17,15 +17,15 @@ using namespace std;
 
 class C_sistema
 {
-      public:
+      public://NO HAY ATRIBUTOS
       	
-      public:
+      public://MÉTODOS
         C_sistema();
         virtual void agregar()=0;
         virtual void editar()=0;
         virtual void mostrar()=0;
 };
-
+//CONSTRUCTOR VACÍO
 C_sistema::C_sistema()
 {
 };
