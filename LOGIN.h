@@ -27,7 +27,7 @@ class C_login
         int flag1,c;
         C_menu objeto4;
              
-    private://ATRIBUTOS QUE NO SON PUBLICOS SOLO PARA LA CLASES HIJAS Y ELLA MISMA
+    private://ATRIBUTOS QUE NO SON PUBLICOS SOLO PARA LAS CLASES HIJAS Y ELLA MISMA
     	string usuario;
       	string contrasena;
       	
@@ -40,7 +40,7 @@ class C_login
 //CONSTRUCTOR
 C_login::C_login()
 {
-	//SE INICALIZAN LOS ATRIBUTOS
+	//SE INICIALIZAN LOS ATRIBUTOS
 	flag1=0;
 	usuario = "admin";
     contrasena = "MyNewP4ss!";
