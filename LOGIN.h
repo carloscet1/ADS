@@ -21,24 +21,26 @@ using namespace std;
 
 class C_login
 {
-    public:
+    public://ATRIBUTOS
         string intento_usuario;
         char intento_contrasena;
         int flag1,c;
         C_menu objeto4;
              
-    private:
+    private://ATRIBUTOS QUE NO SON PUBLICOS SOLO PARA LA CLASES HIJAS Y ELLA MISMA
     	string usuario;
       	string contrasena;
       	
-    public:
+    public://MÉTODOS
         C_login();
         void login();
         void bienvenida();
 };	
 
+//CONSTRUCTOR
 C_login::C_login()
 {
+	//SE INICALIZAN LOS ATRIBUTOS
 	flag1=0;
 	usuario = "admin";
     contrasena = "MyNewP4ss!";
@@ -46,6 +48,7 @@ C_login::C_login()
     c = 0;
 };
 
+//MUESTRA BIENVENIDA
 void C_login::bienvenida()
 {
 	time_t tiempo;
@@ -76,10 +79,12 @@ void C_login::bienvenida()
 system("pause");
 system("cls");
 }
+//VALIDACION DE ENTRADA CON MÉTODO LOGIN
 void C_login::login()
 {
 	do
 	{
+		//EL PROGRAMA SOLICITA CONTRASEÑA Y USARIO
 		cout<<"USUARIO: ";
 		cin>>intento_usuario;
 		
@@ -107,13 +112,13 @@ void C_login::login()
 				c++;
 			}
 		}while(intento_contrasena!=13 || intento_contrasena!=' ');
-		
+		//VERIFICA QUE EL USUARIO INGRESO DATOS CORRECTOS PARA INGRESAR AL SISTEMA
 		if(intento_usuario==usuario && c==10)
 		{
 			cout<<"\nENTRADA AL SISTEMA DE MANERA CORRECTA"<<endl;
 			system("pause");
 			system("cls");
-			objeto4.menu_general();
+			objeto4.menu_general();//LLAMA A MENU PRINCIPAL DEL SISTEMA
 			exit(0);
 		}
 			
@@ -122,10 +127,10 @@ void C_login::login()
 			cout<<"\nNombre de usuario o contrasena incorrecto, intente nuevamente"<<endl;
 			system("pause");
 			system("cls");
-			flag1 ++;
+			flag1 ++;//LLEVA EL CONTEO DE INTENTOS QUE LLEVA EL USUARIO PARA LOGEARSE
 		}
-	}while(flag1<3);
-	
+	}while(flag1<3);//LE DA TRES INTENTOS AL USUARIO PARA PODER INGRESAR AL SISTEMA
+	//LE AVISA AL USUARIO QUE YA NO LE QUEDAN MÁS INTENTOS Y EL PROGRAMA TERMINA
 	cout<<"Se ha introducido el nombre de usuario o contrasena 3 veces de manera incorrecta"<<endl;
 }
 
