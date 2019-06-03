@@ -31,7 +31,7 @@ class C_almacenista : public C_sistema//C_ALMACENISTA HEREDA ATRIBUTOS Y MÉTODOS
 //CONSTRUCTOR
 C_almacenista::C_almacenista()
 {
-	//SE INCIALIZA EL ID DE ALMACENISTAS EN 1
+	//SE INICIALIZA EL ID DE ALMACENISTAS EN 1
 	ID_almacenista=1;
 };
 //MÉTODO AGREGAR 
@@ -45,7 +45,7 @@ void C_almacenista::agregar()
 
 void C_almacenista::editar()
 {
-	//PIDE EL NUEVO NOMBRE POR EL QUE SE SUSTUIRA EL ACTUAL
+	//PIDE EL NUEVO NOMBRE POR EL QUE SE SUSTITUIRA EL ACTUAL
 	cout<<"Ingresa el nuevo nombre del almacenista"<<endl;
    	getline(cin, nombre_almacenista);
 }
