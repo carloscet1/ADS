@@ -39,33 +39,35 @@ void C_almacenista::agregar()
 {
 	ID_almacenista;
 	//SE PIDE EL  NOMBRE DEL ALMACENISTA
-    cout<<"Ingresa el nombre del almacenista"<<endl;
+    cout<<"\n\n\n\t\tIngresa el nombre del almacenista:";
+	cin.ignore();
+	 
    	getline(cin, nombre_almacenista);
-}
+ }
 
 void C_almacenista::editar()
 {
 	//PIDE EL NUEVO NOMBRE POR EL QUE SE SUSTITUIRA EL ACTUAL
-	cout<<"Ingresa el nuevo nombre del almacenista"<<endl;
+	cout<<"\n\n\n\t\t\tIngresa el nuevo nombre del almacenista:";
    	getline(cin, nombre_almacenista);
 }
 
 void C_almacenista::mostrar()
 {
 	//MUESTRA EL ID Y EL NOMBRE DEL ALMACENISTA
-	cout<<"-------------------------------"<<endl;
-	cout<<"ID: "<<ID_almacenista<<endl;
-    cout<<"Nombre: "<<nombre_almacenista<<endl;
-    cout<<"-------------------------------"<<endl;
+	cout<<"\n\t\t\t-------------------------------"<<endl;
+	cout<<"\n\t\t\tID: "<<ID_almacenista<<endl;
+    cout<<"\n\t\t\tNombre: "<<nombre_almacenista<<endl;
+    cout<<"\n\t\t\t-------------------------------"<<endl;
 }
 
 void C_almacenista::imprimir_reporte()
 {
 	//MUESTRA TODOS LOS REGISTROS HECHOS HASTA EL MOMENTO DE LA CONSULTA
-	cout<<"-------------------------------"<<endl;
-	cout<<"REPORTE DEL ALMACENISTA: "<<nombre_almacenista<<endl;
-	cout<<"ID: "<<ID_almacenista<<endl;
-    cout<<"Nombre: "<<nombre_almacenista<<endl;
-    cout<<"-------------------------------"<<endl;
+	cout<<"\n\t\t\t-------------------------------"<<endl;
+	cout<<"\n\t\t\tREPORTE DEL ALMACENISTA: "<<nombre_almacenista<<endl;
+	cout<<"\n\t\t\tID: "<<ID_almacenista<<endl;
+    cout<<"\n\t\t\tNombre: "<<nombre_almacenista<<endl;
+    cout<<"\n\t\t\t-------------------------------"<<endl;
 }
 #endif

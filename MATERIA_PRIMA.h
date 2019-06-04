@@ -43,17 +43,17 @@ void C_materia_prima::agregar()
 	//SE SOLICITAN LOS DATOS DE LA MATERIA PRIMA
 	ID_materia_prima;
 	
-    cout<<"Ingresa el nombre de la materia prima"<<endl;
+    cout<<"\n\t\tIngresa el nombre de la materia prima:";
    	getline(cin, materia_prima);
     
-    cout<<"Ingresa el nombre del proveedor"<<endl;
+    cout<<"\n\t\tIngresa el nombre del proveedor:";
    	getline(cin, proveedor);
     
-   	cout<<"Ingrese el precio unitario"<<endl;
+   	cout<<"\n\t\tIngrese el precio unitario:";
    	cin>>p_unitario;
 	cin.ignore();
 	
-	cout<<"Ingrese la cantidad total comprada"<<endl;
+	cout<<"\n\t\tIngrese la cantidad total comprada:";
    	cin>>total_comprado;
 	cin.ignore();
 }
@@ -61,17 +61,17 @@ void C_materia_prima::agregar()
 void C_materia_prima::editar()
 {
 	//SE SOLICITA LA NUEVA INFORMACION DE LA MATERIA PRIMA
-	cout<<"Ingresa el nuevo nombre de la materia prima"<<endl;
+	cout<<"\n\t\tIngresa el nuevo nombre de la materia prima:";
    	getline(cin, materia_prima);
     
-    cout<<"Ingresa el nuevo nombre del proveedor"<<endl;
+    cout<<"\n\t\tIngresa el nuevo nombre del proveedor:";
    	getline(cin, proveedor);
     
-   	cout<<"Ingrese el nuevo precio unitario"<<endl;
+   	cout<<"\n\t\tIngrese el nuevo precio unitario:";
    	cin>>p_unitario;
 	cin.ignore();
 
-	cout<<"Ingrese la nueva cantidad total comprada"<<endl;
+	cout<<"\n\t\tIngrese la nueva cantidad total comprada:";
    	cin>>total_comprado;
 	cin.ignore();
 }
@@ -79,13 +79,13 @@ void C_materia_prima::editar()
 void C_materia_prima::mostrar()
 {
 	//MUESTRA EL REGISTRO SOLICITADO
-	cout<<"-------------------------------"<<endl;
-	cout<<"ID: "<<ID_materia_prima<<endl;
-    cout<<"Materia prima: "<<materia_prima<<endl;
-    cout<<"Proveedor: "<<proveedor<<endl;
-    cout<<"Precio unitario: "<<p_unitario<<endl;
-    cout<<"Total comprado: "<<total_comprado<<endl;
-    cout<<"-------------------------------"<<endl;
+	cout<<"\n\t\t-------------------------------"<<endl;
+	cout<<"\n\t\tID: "<<ID_materia_prima<<endl;
+    cout<<"\n\t\tMateria prima: "<<materia_prima<<endl;
+    cout<<"\n\t\tProveedor: "<<proveedor<<endl;
+    cout<<"\n\t\tPrecio unitario: "<<p_unitario<<endl;
+    cout<<"\n\t\tTotal comprado: "<<total_comprado<<endl;
+    cout<<"\n\t\t-------------------------------"<<endl;
 }
 
 #endif

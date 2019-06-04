@@ -42,10 +42,10 @@ void C_menu::menu_general()
 {
 do
     {
-      cout<<"Selecciona una opcion"<<endl;
-      cout<<"1.- Menu de almacenista"<<endl;
-      cout<<"2.- Menu de materia prima"<<endl;
-      cout<<"3.- Salir"<<endl;
+      cout<<"\n\t\tSelecciona una opcion";
+      cout<<"\n\t\t1.- Menu de almacenista";
+      cout<<"\n\t\t2.- Menu de materia prima";
+      cout<<"\n\t\t3.- Salir\n                ";
       cin>>opcion;
       cin.ignore();
       switch(opcion)
@@ -78,16 +78,16 @@ void C_menu::menu_almacenista()
 {
 do
     {
-      cout<<"Selecciona una opcion"<<endl;
-      cout<<"1.- Agregar registro almacenista"<<endl;
-      cout<<"2.- Eliminar registro almacenista"<<endl;
-      cout<<"3.- Buscar registro almacenista"<<endl;
-      cout<<"4.- Editar registro almacenista"<<endl;
-      cout<<"5.- Mostrar registros almacenistas"<<endl;
-      cout<<"6.- Imprimir reporte"<<endl;
-      cout<<"7.- Salir"<<endl;
+      cout<<"\n\t\tSelecciona una opcion";
+      cout<<"\n\t\t1.- Agregar registro almacenista";
+      cout<<"\n\t\t2.- Eliminar registro almacenista";
+      cout<<"\n\t\t3.- Buscar registro almacenista";
+      cout<<"\n\t\t4.- Editar registro almacenista";
+      cout<<"\n\t\t5.- Mostrar registros almacenistas";
+      cout<<"\n\t\t6.- Imprimir reporte";
+      cout<<"\n\t\t7.- Salir\n                ";
       cin>>opcion;
-      cin.ignore();
+      //cin.ignore();
       switch(opcion)
       {
        	case '1':
@@ -96,15 +96,15 @@ do
 		  	objeto2.agregar();
 		  	dato2.push_back(objeto2);//SE GUARDA EL NOMBRE DEL ALMACENISTA
 		  	objeto2.ID_almacenista++;//SE DA EL INCREMENTO DEL ID PARA EL SIGUIENTE REGISTRO
-		  	cout<<"-------------------------------"<<endl;
-			cout<<"REGISTRO AGREGADO EXITOSAMENTE"<<endl;
-    		cout<<"-------------------------------"<<endl;
+		  	cout<<"\n\t\t\t-------------------------------"<<endl;
+			cout<<"\n\t\t\tREGISTRO AGREGADO EXITOSAMENTE"<<endl;
+    		cout<<"\n\t\t\t-------------------------------"<<endl;
             break;
        
        	case '2':
        		//BORRA LA PANTALLA Y DESPLIEGA EL MÉTODO ELIMINAR ALMACENISTA
        		system("cls");
-       		cout<<"Ingrese el ID"<<endl;
+       		cout<<"\n\t\t\tIngrese el ID:";
 	    	cin>>verificar;//INGRESA EL ID DEL ALMACENISTA QUE DECEA ELIMINAR
 	    	cin.ignore();
 	    	flag2=0;
@@ -120,23 +120,23 @@ do
 	        //VALIDA SI EL REGISTRO FUE ELIMINADO O NO
 	        if(flag2==1)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO ELIMINADO EXITOSAMENTE"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\n\t\t\t-------------------------------"<<endl;
+				cout<<"\n\t\t\tREGISTRO ELIMINADO EXITOSAMENTE"<<endl;
+    			cout<<"\n\t\t\t-------------------------------"<<endl;
 			}
 			
 			else
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t\t-------------------------------"<<endl;
+				cout<<"\t\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t\t-------------------------------"<<endl;
 			}
             break;
        
        	case '3':
        		//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO BUSCAR DE LA CLASE ALMACENISTA
        		system("cls");
-       		cout<<"Ingrese el ID"<<endl;
+       		cout<<"\n\t\t\tIngrese el ID:";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag2=0;
@@ -152,9 +152,9 @@ do
          //LE ENVIA UN AVISO AL USUARIO SI FUE EDITADO CORRECTAMENTE EL REGISTRO O NO
 	        if(flag2==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t\t-------------------------------"<<endl;
+				cout<<"\t\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t\t-------------------------------"<<endl;
     			break;
 			}
             break;
@@ -162,7 +162,7 @@ do
 		case '4':
 			//LIMPIA LA PANTALLA Y DESPLIEGA EL MÉTODO EDITAR DE LA CLASE ALMACENISTA
 			system("cls");
-			cout<<"Ingrese el ID"<<endl;
+			cout<<"\n\t\tIngrese el ID:";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag2=0;
@@ -177,16 +177,16 @@ do
 	        //LE ENVIA UN AVISO AL USUARIO SI FUE EDITADO CORRECTAMENTE EL REGISTRO O NO
 		 	 if(flag2==1)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO EDITADO EXITOSAMENTE"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO EDITADO EXITOSAMENTE"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
 			}
 			
 			else
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
 			}
             break;
         
@@ -202,9 +202,9 @@ do
              //LE ENVIA UN AVISO AL USUARIO SI NO HAY REGISTROS
 			if(flag2==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"NO SE ENCONTRARON REGISTROS"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tNO SE ENCONTRARON REGISTROS"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
     			break;
 			}
             break;
@@ -212,7 +212,7 @@ do
 		case '6':
 			//LIMPIA LA PANTALLA Y DESPLIEGA EL EL MÉTODO IMPRIME REPORTE
 			system("cls");
-			cout<<"Ingrese el ID"<<endl;
+			cout<<"\n\t\tIngrese el ID:";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag2=0;
@@ -228,9 +228,9 @@ do
 	        //AVISA AL USUARIO SI NO HAY REGISTROS
 	        if(flag2==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
     			break;
 			}
             break;
@@ -241,7 +241,7 @@ do
             break; 		     
        
        	default:
-            cout<<"Esa opcion no existe"<<endl;
+            cout<<"\t\tEsa opcion no existe"<<endl;
             break;                    
       }
     }while(opcion!='7');
@@ -251,14 +251,14 @@ void C_menu::menu_materia_prima()
 {
 do
     {
-      cout<<"Selecciona una opcion"<<endl;
-      cout<<"1.- Agregar registro materia prima"<<endl;
-      cout<<"2.- Eliminar registro materia prima"<<endl;
-      cout<<"3.- Buscar registro materia prima"<<endl;
-      cout<<"4.- Editar registro materia prima"<<endl;
-      cout<<"5.- Mostrar registros materia prima"<<endl;
-      cout<<"6.- Costo total por producto"<<endl;
-      cout<<"7.- Salir"<<endl;
+      cout<<"\n\t\tSelecciona una opcion";
+      cout<<"\n\t\t1.- Agregar registro materia prima";
+      cout<<"\n\t\t2.- Eliminar registro materia prima";
+      cout<<"\n\t\t3.- Buscar registro materia prima";
+      cout<<"\n\t\t4.- Editar registro materia prima";
+      cout<<"\n\t\t5.- Mostrar registros materia prima";
+      cout<<"\n\t\t6.- Costo total por producto";
+      cout<<"\n\t\t7.- Salir\n                ";
       cin>>opcion;
       cin.ignore();
       switch(opcion)
@@ -269,15 +269,15 @@ do
 			objeto3.agregar();
 		  	dato3.push_back(objeto3);//GUARDA EL NOMBRE DE LA MATERIA PRIMA Y EL ID
 		  	objeto3.ID_materia_prima++;//INCREMENTA EL ID DE LA MATERIA PRIMA PARA EL SIGUIENTE REGISTRO
-		  	cout<<"-------------------------------"<<endl;
-			cout<<"REGISTRO AGREGADO EXITOSAMENTE"<<endl;
-    		cout<<"-------------------------------"<<endl;
+		  	cout<<"\n\t\t-------------------------------"<<endl;
+			cout<<"\n\t\tREGISTRO AGREGADO EXITOSAMENTE"<<endl;
+    		cout<<"\n\t\t-------------------------------"<<endl;
             break;
        
        	case '2':
        		//LIMPIA PANTALLA Y DEPSLIEGA EL MÉTODO ELIMINAR DE LA CLASE MATERIA PRIMA
        		system("cls");
-			cout<<"Ingrese el ID"<<endl;
+			cout<<"\n\t\tIngrese el ID";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag3=0;
@@ -294,23 +294,23 @@ do
   	 		//LE AVISA AL USUARIO SI FUE EXITOSO O NO ELIMINAR EL REGISTRO
 	        if(flag3==1)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO ELIMINADO EXITOSAMENTE"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO ELIMINADO EXITOSAMENTE"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
 			}
 			
 			else
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
 			}
             break;
        
        	case '3':
        		//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO DE LA CLASE MATERIA PRIMA
        		system("cls");
-	        cout<<"Ingrese el ID"<<endl;
+	        cout<<"\t\tIngrese el ID";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag3=0;
@@ -326,9 +326,9 @@ do
 	        //LE MANDA UN AVISO AL USUARIO DE QUE NO SE ENCONTRARON REGISTROS
 	        if(flag3==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
     			break;
 			}
             break;
@@ -336,7 +336,7 @@ do
 		case '4':
 			//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO DE LA CLASE MATERIA PRIMA 
 			system("cls");
-	        cout<<"Ingrese el ID"<<endl;
+	        cout<<"\n\t\tIngrese el ID";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag3=0;
@@ -353,16 +353,16 @@ do
 	        //LE MANDA UN MENSAJE AL USUARIO DE QUE SE LOGRO O NO  EDITAR EL REGISTRO
 		 	if(flag3==1)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO EDITADO EXITOSAMENTE"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------";
+				cout<<"\t\tREGISTRO EDITADO EXITOSAMENTE";
+    			cout<<"\t\t-------------------------------";
 			}
 			
 			else
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
 			}
             break;
             
@@ -379,9 +379,9 @@ do
 			//MUESTRA UN AVISO SI NO HAY REGISTROS
 			if(flag3==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"NO SE ENCONTRARON REGISTROS"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\t\t-------------------------------"<<endl;
+				cout<<"\t\tNO SE ENCONTRARON REGISTROS"<<endl;
+    			cout<<"\t\t-------------------------------"<<endl;
     			break;
 			}
             break;
@@ -389,7 +389,7 @@ do
 		case '6':
 			//LIMPIA PANTALLA Y DESPLIEGA EL MÉTODO CALCULAR COSTO TOTAL DEL PRODUCTO
 			system("cls");
-	        cout<<"Ingrese el ID"<<endl;
+	        cout<<"\n\t\tIngrese el ID";
 	    	cin>>verificar;
 	    	cin.ignore();
 	    	flag3=0;
@@ -399,7 +399,7 @@ do
 	            if(dato3[i].ID_materia_prima==verificar)
 	           	{	//CALCULA EL COSTO DE LA MATERIA PRIMA
 	            	objeto3.costo_total = dato3[i].total_comprado*dato3[i].p_unitario;
-	            	cout<<"El costo calculado es: "<<objeto3.costo_total<<endl;
+	            	cout<<"\n\t\tEl costo calculado es: "<<objeto3.costo_total<<endl;
 	            	flag3=1;//NOS DICE SI SÍ FUE CALCULADO EL COSTO O SI EXISTE
 	            	break;
 				}
@@ -407,9 +407,9 @@ do
 	        //LE AVISA AL USUARIO QUE NO FUE ENCONTRADO EL ID INGRESADO
 	        if(flag3==0)
 	        { 
-	            cout<<"-------------------------------"<<endl;
-				cout<<"REGISTRO NO ENCONTRADO"<<endl;
-    			cout<<"-------------------------------"<<endl;
+	            cout<<"\n\t\t-------------------------------"<<endl;
+				cout<<"\n\t\tREGISTRO NO ENCONTRADO"<<endl;
+    			cout<<"\n\t\t-------------------------------"<<endl;
     			break;
 			}
             break;			
@@ -421,7 +421,7 @@ do
        
        	default:
        		//AVISA AL USUARIO QUE NO ES VALIDA LA OPCIÓN INGRESADA
-            cout<<"Esa opcion no existe"<<endl;
+            cout<<"\n\t\tEsa opcion no existe";
             break;
 			    
     	}
