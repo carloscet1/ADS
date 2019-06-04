@@ -9,7 +9,6 @@ PROYECTO
 
 */
 #include "LOGIN.h"
-using namespace std;
 
 int main()
 {
