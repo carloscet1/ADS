@@ -85,10 +85,10 @@ void C_login::login()
 	do
 	{
 		//EL PROGRAMA SOLICITA CONTRASEÑA Y USARIO
-		cout<<"USUARIO: ";
+		cout<<"\n\n\n\t\t\tUSUARIO:";
 		cin>>intento_usuario;
 		
-		cout<<"CONTRASENA: ";
+		cout<<"\n\n\n\t\t\tCONTRASENA:";
 		do
 		{
     		intento_contrasena = getch();
@@ -115,7 +115,7 @@ void C_login::login()
 		//VERIFICA QUE EL USUARIO INGRESO DATOS CORRECTOS PARA INGRESAR AL SISTEMA
 		if(intento_usuario==usuario && c==10)
 		{
-			cout<<"\nENTRADA AL SISTEMA DE MANERA CORRECTA"<<endl;
+			cout<<"\n\n\t\t\tENTRADA AL SISTEMA DE MANERA CORRECTA"<<endl;
 			system("pause");
 			system("cls");
 			objeto4.menu_general();//LLAMA A MENU PRINCIPAL DEL SISTEMA
